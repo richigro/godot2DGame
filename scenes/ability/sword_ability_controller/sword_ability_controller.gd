@@ -5,11 +5,16 @@ const MAX_RANGE = 150
 # instantiate a scene at runtime
 @export var sword_ability: PackedScene
 var damage = 5
+# this is the initial sword's rate
+var base_wait_time
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	base_wait_time = $Timer.wait_time
 	# the dollar sign is short for get node
 	$Timer.timeout.connect(on_timer_timeout)
+	# connect to a signal from the game events singleton
+	GameEvents.ability_upgrade_added.connect(on_ability_upgrade_added)
 
 
 func on_timer_timeout():
@@ -34,10 +39,9 @@ func on_timer_timeout():
 	)
 	# this can be instantiated because?
 	var sword_instance = sword_ability.instantiate() as SwordAbility
-	# Will get the Main node
-	var main_node = player.get_parent()
-	# Add the sword to the Main node
-	main_node.add_child(sword_instance)
+	var foreground_layer = get_tree().get_first_node_in_group("foreground_layer")
+	# Add the sword to the foreground layer
+	foreground_layer.add_child(sword_instance)
 	# assign a damage dealt
 	sword_instance.hitbox_component.damage = damage
 	# place the sword at the position of the closest enemy within 150 pixels
@@ -52,3 +56,16 @@ func on_timer_timeout():
 	var enemy_direction = enemies[0].global_position - sword_instance.global_position
 	# rotate the sword toward the enemy's direction
 	sword_instance.rotation = enemy_direction.angle()
+
+
+func on_ability_upgrade_added(upgrade: AbilityUpgrade, current_upgrades: Dictionary):
+	# we need to recalculate the timer's wait time if the upgraded ability is the 
+	# sword's rate
+	if upgrade.id != "sword_rate":
+		return
+		
+	var percent_reduction = current_upgrades["sword_rate"]["quantity"] * .1
+	# reduce the timer's wait time by the percent reduction
+	$Timer.wait_time = base_wait_time * (1 - percent_reduction)
+	# re-start the timer
+	$Timer.start()

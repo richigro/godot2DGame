@@ -41,7 +41,7 @@ func apply_upgrade(upgrade: AbilityUpgrade):
 		# if we already have the upgrade increase the quantity
 		# TODO: I might want to put a limit per ability.
 		current_upgrades[upgrade.id]["quantity"] += 1
-	print(current_upgrades)
+	GameEvents.emit_ability_upgrade_added(upgrade, current_upgrades)
 
 
 func on_upgrade_selected(upgrade: AbilityUpgrade):
