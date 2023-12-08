@@ -1,10 +1,11 @@
+Node2D
+Node
+CollisionShape2D
+CharacterBody2D
+Sprite2D
 AnimationPlayer
 GPUParticles2D
-Node2D
-CollisionShape2D
-Sprite2D
 Timer
-Node
 MarginContainer
 Button
 Label
@@ -14,6 +15,5 @@ CanvasLayer
 ProgressBar
 Area2D
 HBoxContainer
-CharacterBody2D
 Camera2D
 TileMap

@@ -1,4 +1,5 @@
 res://scenes/component
+res://scenes/game_object/wizard_enemy
 res://scenes/ability
 res://scenes/ability/axe_ability_controller
 res://scenes/ui

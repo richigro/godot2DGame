@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1702005721
+::res://::1702008387
 icon.svg::CompressedTexture2D::2907715057399172058::1699936047::1699936055::1::::<><>::
 ::res://assets/::1699940249
 ::res://assets/environment/::1699940260
@@ -41,8 +41,8 @@ hurtbox_component.gd::GDScript::-1::1700279480::0::1::::HurtboxComponent<>Area2D
 hurtbox_component.tscn::PackedScene::5413405688728849693::1700707446::0::1::::<><>::res://scenes/component/hurtbox_component.gd
 vial_drop_component.gd::GDScript::-1::1700771901::0::1::::<>Node<>::
 vial_drop_component.tscn::PackedScene::4200303620911104721::1701743904::0::1::::<><>::res://scenes/component/vial_drop_component.gd<>uid://b630dlrdm0d0x
-::res://scenes/game_object/::1700198052
-::res://scenes/game_object/basic_enemy/::1702005389
+::res://scenes/game_object/::1702008357
+::res://scenes/game_object/basic_enemy/::1702008273
 basic_enemy.gd::GDScript::-1::1702005381::0::1::::<>CharacterBody2D<>::
 basic_enemy.png::CompressedTexture2D::6841753341232007138::1700013231::1700198009::1::::<><>::
 basic_enemy.tscn::PackedScene::7276065922837973680::1702005389::0::1::::<><>::uid://c4qgxbxwgbin7::::res://scenes/game_object/basic_enemy/basic_enemy.png<>res://scenes/game_object/basic_enemy/basic_enemy.gd<>uid://by4bqsc2kqgkd::::res://scenes/component/health_component.tscn<>uid://b03wnfliocvgb::::res://scenes/component/vial_drop_component.tscn<>uid://carv5p6jrejdc::::res://scenes/component/death_component.tscn<>uid://cjekaa535a73f::::res://scenes/component/hurtbox_component.tscn
@@ -57,6 +57,8 @@ game_camera.tscn::PackedScene::2774824806642727443::1700198052::0::1::::<><>::re
 player.gd::GDScript::-1::1702005667::0::1::::<>CharacterBody2D<>::
 player.png::CompressedTexture2D::2995645867841356404::1699936949::1700198021::1::::<><>::
 player.tscn::PackedScene::4865678623543988681::1702005687::0::1::::<><>::res://scenes/game_object/player/player.gd<>uid://bixd35lrum2h1::::res://scenes/game_object/player/player.png<>uid://bklv655j1ohhe::::res://scenes/ability/sword_ability_controller/sword_ability_controller.tscn<>uid://by4bqsc2kqgkd::::res://scenes/component/health_component.tscn
+::res://scenes/game_object/wizard_enemy/::1702008387
+wizard_enemy.png::CompressedTexture2D::477020246931341215::1702008268::1702008387::1::::<><>::
 ::res://scenes/main/::1702005389
 main.gd::GDScript::-1::1701749094::0::1::::<>Node<>::
 main.tscn::PackedScene::5862275014223009190::1702005389::0::1::::<><>::uid://cbk8assv2v1sf::::res://scenes/game_object/player/player.tscn<>uid://dbgbvuffueqx2::::res://scenes/ui/arena_time_ui.tscn<>uid://cn0vqblvlqqs5::::res://resources/tileset.tres<>res://scenes/main/main.gd<>uid://cp3w7d7f1hhrx::::res://scenes/manager/arena_time_manager.tscn<>uid://db5wc14b0h15e::::res://scenes/manager/enemy_manager.tscn<>uid://dkdef3obc36in::::res://scenes/ui/end_screen.tscn<>uid://js3a16g7hpcg::::res://scenes/ui/experience_bar.tscn<>uid://bfse7u106356n::::res://scenes/game_object/game_camera/game_camera.tscn<>uid://cwybv02vnqev3::::res://scenes/manager/experience_manager.tscn<>uid://boobmfq05a6wp::::res://scenes/manager/upgrade_manager.tscn
