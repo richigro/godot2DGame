@@ -31,6 +31,10 @@ func accelerate_in_direction(direction: Vector2):
 	velocity = velocity.lerp(desired_velocity, 1 - exp(-acceleration * smoothing_value))
 
 
+func decelerate():
+	accelerate_in_direction(Vector2.ZERO)
+
+
 func move(character_body: CharacterBody2D):
 	# assign our character's velocity to our internal velocity set in func above default is Vector2.ZERO
 	character_body.velocity = velocity
