@@ -1,5 +1,6 @@
 res://scenes/game_object/player/player.tscn
 res://resources/tileset.tres
+res://scenes/component/hit_flash_component.gdshader
 res://scenes/main/main.tscn
 res://scenes/manager/arena_time_manager.tscn
 res://scenes/ability/axe_ability/axe_ability.tscn
@@ -9,4 +10,8 @@ res://scenes/game_object/basic_enemy/basic_enemy.tscn
 res://scenes/game_object/wizard_enemy/wizard_enemy.tscn
 res://scenes/component/velocity_component.tscn
 res://scenes/manager/enemy_manager.tscn
+res://scenes/ui/floating_text.tscn
+res://scenes/component/hurtbox_component.tscn
+res://scenes/component/health_component.tscn
 res://scenes/ui/arena_time_ui.tscn
+res://scenes/component/hit_flash_component.tscn
