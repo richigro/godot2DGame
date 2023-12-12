@@ -15,3 +15,7 @@ res://scenes/component/hurtbox_component.tscn
 res://scenes/component/health_component.tscn
 res://scenes/ui/arena_time_ui.tscn
 res://scenes/component/hit_flash_component.tscn
+res://scenes/ability/sword_ability_controller/sword_ability_controller.tscn
+res://resources/upgrades/sword_damage.tres
+res://scenes/component/hurtbox_component.gd
+res://scenes/manager/upgrade_manager.gd

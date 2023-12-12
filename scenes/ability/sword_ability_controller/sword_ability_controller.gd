@@ -4,7 +4,8 @@ const MAX_RANGE = 150
 
 # instantiate a scene at runtime
 @export var sword_ability: PackedScene
-var damage = 5
+var base_damage = 5
+var additional_damage_percent = 1
 # this is the initial sword's rate
 var base_wait_time
 
@@ -43,7 +44,7 @@ func on_timer_timeout():
 	# Add the sword to the foreground layer
 	foreground_layer.add_child(sword_instance)
 	# assign a damage dealt
-	sword_instance.hitbox_component.damage = damage
+	sword_instance.hitbox_component.damage = base_damage * additional_damage_percent
 	# place the sword at the position of the closest enemy within 150 pixels
 	sword_instance.global_position = enemies[0].global_position
 	# A Vector2.RIGHT has a rotation of 0
@@ -59,13 +60,14 @@ func on_timer_timeout():
 
 
 func on_ability_upgrade_added(upgrade: AbilityUpgrade, current_upgrades: Dictionary):
-	# we need to recalculate the timer's wait time if the upgraded ability is the 
-	# sword's rate
-	if upgrade.id != "sword_rate":
-		return
-		
-	var percent_reduction = current_upgrades["sword_rate"]["quantity"] * .1
-	# reduce the timer's wait time by the percent reduction
-	$Timer.wait_time = base_wait_time * (1 - percent_reduction)
-	# re-start the timer
-	$Timer.start()
+	# sword rate upgrade 
+	if upgrade.id == "sword_rate":
+		# we need to recalculate the timer's wait time
+		var percent_reduction = current_upgrades["sword_rate"]["quantity"] * .1
+		# reduce the timer's wait time by the percent reduction & re-start the timer
+		$Timer.wait_time = base_wait_time * (1 - percent_reduction)
+		$Timer.start()
+	elif upgrade.id == "sword_damage":
+		# TODO: I might want to upgrade a specified percent increase instead of hard-coding
+		# 15 percent on every upgrade of this type
+		additional_damage_percent = 1 + (current_upgrades["sword_damage"]["quantity"] * 0.15)
