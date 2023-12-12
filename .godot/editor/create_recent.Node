@@ -1,3 +1,5 @@
+MarginContainer
+PanelContainer
 Node
 Sprite2D
 Label
@@ -7,10 +9,8 @@ CollisionShape2D
 CharacterBody2D
 GPUParticles2D
 Timer
-MarginContainer
 Button
 VBoxContainer
-PanelContainer
 CanvasLayer
 ProgressBar
 Area2D

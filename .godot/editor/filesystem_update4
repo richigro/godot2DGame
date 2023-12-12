@@ -1,6 +1,8 @@
-res://scenes/game_object/player/player.tscn
+res://scenes/ui/ability_upgrade_card.tscn
+res://resources/theme/theme.tres
 res://resources/tileset.tres
 res://scenes/component/hit_flash_component.gdshader
+res://scenes/game_object/player/player.tscn
 res://scenes/main/main.tscn
 res://scenes/manager/arena_time_manager.tscn
 res://scenes/ability/axe_ability/axe_ability.tscn
@@ -16,6 +18,3 @@ res://scenes/component/health_component.tscn
 res://scenes/ui/arena_time_ui.tscn
 res://scenes/component/hit_flash_component.tscn
 res://scenes/ability/sword_ability_controller/sword_ability_controller.tscn
-res://resources/upgrades/sword_damage.tres
-res://scenes/component/hurtbox_component.gd
-res://scenes/manager/upgrade_manager.gd
