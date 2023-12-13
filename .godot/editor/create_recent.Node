@@ -1,4 +1,7 @@
 AnimationPlayer
+ColorRect
+CanvasLayer
+VBoxContainer
 MarginContainer
 PanelContainer
 Node
@@ -10,8 +13,6 @@ CharacterBody2D
 GPUParticles2D
 Timer
 Button
-VBoxContainer
-CanvasLayer
 ProgressBar
 Area2D
 HBoxContainer

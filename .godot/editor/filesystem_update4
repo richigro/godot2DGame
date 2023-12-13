@@ -1,9 +1,7 @@
-res://scenes/ui/ability_upgrade_card.tscn
+res://scenes/ui/upgrade_screen.tscn
 res://resources/theme/theme.tres
 res://resources/tileset.tres
 res://scenes/component/hit_flash_component.gdshader
-res://scenes/ui/ability_upgrade_card.gd
-res://scenes/ui/upgrade_screen.tscn
 res://scenes/ui/upgrade_screen.gd
 res://scenes/game_object/player/player.tscn
 res://scenes/main/main.tscn
@@ -14,3 +12,15 @@ res://scenes/manager/upgrade_manager.tscn
 res://scenes/game_object/basic_enemy/basic_enemy.tscn
 res://scenes/game_object/wizard_enemy/wizard_enemy.tscn
 res://scenes/ability/sword_ability_controller/sword_ability_controller.tscn
+res://scenes/ui/ability_upgrade_card.tscn
+res://scenes/ui/experience_bar.tscn
+res://scenes/ui/end_screen.tscn
+res://scenes/ui/end_screen.gd
+res://scenes/game_object/player/player.gd
+res://resources/upgrades/player_speed.tres
+res://scenes/manager/upgrade_manager.gd
+res://scenes/ui/vignette.tscn
+res://scenes/ui/vignette.gdshader
+res://scenes/autoload/game_events.tscn
+res://scenes/autoload/game_events.gd
+res://scenes/ui/vignette.gd

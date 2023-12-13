@@ -31,6 +31,10 @@ func set_ability_upgrades(upgrades: Array[AbilityUpgrade]):
 
 func on_upgrade_selected(upgrade: AbilityUpgrade):
 	upgrade_selected.emit(upgrade)
+	
+	$AnimationPlayer.play("out")
+	#wait for animation to finish before moving on to the next line of code
+	await $AnimationPlayer.animation_finished
 	# un-pause the game
 	get_tree().paused = false
 	# remove the upgrade screen once the upgrade has been selected
