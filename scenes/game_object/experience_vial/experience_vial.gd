@@ -51,5 +51,6 @@ func on_area_entered(other_area: Area2D):
 	# tween.chain waits for previous tweens to finish before running the next tween method
 	tween.chain()
 	tween.tween_callback(collect)
-	
+	# play random pick up sound effect
+	$RandomStreamPlayer2DComponent.play_random()
 

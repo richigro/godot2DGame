@@ -74,6 +74,7 @@ func on_health_changed():
 	# this should only run if player looses health
 	GameEvents.emit_player_damaged()
 	update_health_display()
+	$HitRandomStreamPlayer.play_random()
 
 
 func on_ability_upgrade_added(ability_upgrade: AbilityUpgrade, current_upgrades: Dictionary):

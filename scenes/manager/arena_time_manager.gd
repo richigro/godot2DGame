@@ -27,5 +27,8 @@ func get_time_elapsed():
 
 
 func on_timer_timeout():
+	# if we get to this point the player has survived and won the game
 	var end_screen_instance = end_screen_scene.instantiate()
 	add_child(end_screen_instance)
+	# play victory jingle
+	end_screen_instance.play_jingle()
