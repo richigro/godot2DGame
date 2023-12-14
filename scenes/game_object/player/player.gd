@@ -30,7 +30,6 @@ func _process(delta):
 	velocity_component.accelerate_in_direction(direction)
 	velocity_component.move(self)
 	
-	print(movement_vector)
 	if movement_vector.x != 0 || movement_vector.y != 0:
 		animation_player.play("walk")
 	else:
@@ -52,7 +51,6 @@ func check_deal_damage():
 		return
 	health_component.damage(1)
 	damage_interval_timer.start()
-	print(health_component.current_health)
 	
 func update_health_display():
 	health_bar.value = health_component.get_health_percent()

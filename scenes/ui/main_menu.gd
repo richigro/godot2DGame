@@ -10,10 +10,14 @@ func _ready():
 
 
 func on_play_pressed():
+	ScreenTransition.transition()
+	await ScreenTransition.transition_halfway
 	get_tree().change_scene_to_file("res://scenes/main/main.tscn")
 
 
 func on_options_pressed():
+	ScreenTransition.transition()
+	await ScreenTransition.transition_halfway
 	var options_instance = options_scene.instantiate()
 	# add as a child to the current scene (the main menu scene)
 	add_child(options_instance)
