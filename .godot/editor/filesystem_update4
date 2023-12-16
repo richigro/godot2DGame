@@ -1,7 +1,14 @@
-res://scenes/ui/meta_upgrade_card.tscn
+res://scenes/ui/meta_menu.tscn
 res://resources/theme/theme.tres
 res://scenes/autoload/screen_transition.gdshader
 res://resources/tileset.tres
 res://scenes/ui/vignette.gdshader
 res://scenes/component/hit_flash_component.gdshader
-res://scenes/ui/meta_menu.tscn
+res://scenes/ui/meta_upgrade_card.tscn
+res://scenes/ui/main_menu.tscn
+res://scenes/autoload/screen_transition.tscn
+res://scenes/ui/end_screen.tscn
+res://scenes/component/vial_drop_component.tscn
+res://scenes/autoload/meta_progression.tscn
+res://scenes/game_object/basic_enemy/basic_enemy.tscn
+res://scenes/ui/meta_menu.gd
