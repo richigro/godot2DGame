@@ -39,9 +39,11 @@ func get_spawn_position():
 		var random_vector = random_direction * SPAWN_RADIUS
 		# the position at the end of the random vector
 		spawn_position = player.global_position + random_vector
+		# this line helps sort out a bug where enemies are spawned on top of a wall and can't move
+		var additional_check_offset = random_direction * 20
 		# raycast check to detect if there is a collision with a wall
 		# from our player's current position to our new spawn positon
-		var query_parameters = PhysicsRayQueryParameters2D.create(player.global_position, spawn_position, wall_collision_mask)
+		var query_parameters = PhysicsRayQueryParameters2D.create(player.global_position, spawn_position + additional_check_offset, wall_collision_mask)
 		var collision_result = get_tree().root.world_2d.direct_space_state.intersect_ray(query_parameters)
 		
 		if collision_result.is_empty():
